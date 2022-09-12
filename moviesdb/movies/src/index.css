@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .table {
-  width: 80%; 
+  width: 95%; 
   margin: auto;
   gap: 20px;
 }
@@ -38,13 +38,22 @@ code {
   margin-top: 20px;
   padding-left: 10px;
   color: black;
+  margin-bottom: 5px;
+}
+.posterData {
+  width: 90%;
+  text-align: left;
+}
+.tbody {
+  margin-bottom: 20px;
 }
 .posterImg{
   width: 120px; 
   margin-right: 30px;
+  margin-top: 40px;
 }
 
-@media screen and (max-width: 00px) {
+@media screen and (max-width: 600px) {
   .moviessearch {
     border: 2px solid gold;
     border-radius: 30px;

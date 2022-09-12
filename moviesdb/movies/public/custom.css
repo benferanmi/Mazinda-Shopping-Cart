@@ -1159,7 +1159,21 @@
     padding: 15px 35px;
     font-size: 20px;
   }
+  .button3{
+    height: 25px;
+    width: 80px;
+    border-radius: 10px;
+    background-color: #151d2e;
+    color: goldenrod;
 
+  }
+  .button3:hover {
+    height: 30px;
+    width: 100px;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: black;
+    background-color: goldenrod;
+  }
   .width-65 {
     width: 65px !important;
   } 
