@@ -181,7 +181,7 @@ margin-left: 15px;
   .main{
     flex-direction: column;
     margin-top: 50px;
-    height: 400px;
+    height: 500px;
     gap: 20px;
   }
   .product-images {
@@ -246,13 +246,16 @@ margin-left: 15px;
   .main{
     flex-direction: column;
     margin-top: 50px;
-    height: 400px;
-    gap: 16px;
+     gap: 16px;
   }
   .main .icon-set {
     position: relative;
     top: 0px;
     gap: 10px;
+  }
+  .icon-set img {
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .product-images {
     display: flex;
@@ -260,7 +263,7 @@ margin-left: 15px;
     justify-content: center;
   }
   .main .product-image {
-    display: contents;
+     width: 95%;
   }
   .product-details {
     width: 100%;
