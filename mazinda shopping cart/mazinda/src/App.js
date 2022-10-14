@@ -48,7 +48,7 @@ function App() {
             <span className="icon2">
               <FontAwesomeIcon icon={faShare} />
             </span>
-            <img src={productImg} alt="product" />
+            <img src={productImg} alt="product" className="pimg" />
             <span className="icon1">
               <FontAwesomeIcon icon={faHeart} color="red" />
             </span>

@@ -135,7 +135,7 @@ padding-bottom: 20px;
   margin: 10px 0px !important;
   color: #5597DA;
 }
-.button-light, .button-solid:hover {
+.button-light{
   background: #FFFFFF;
 border: 1px solid #F26107;
 border-radius: 8px;
@@ -147,7 +147,7 @@ font-size: 16px;
 font-family: 'Montserrat', sans-serif;
 margin-right: 15px;
 }
-.button-solid, .button-light:hover {
+.button-solid {
   background: #F26107;
 border-radius: 8px;
 width: 160px;
@@ -299,5 +299,19 @@ margin-left: 15px;
   }
   .reviewer-details p {
     font-size: 12px;
+  }
+  .product-images {
+    padding: 0px 15px;
+    display: contents;
+  }
+  .product-image .pimg {
+    width:95%;
+  }
+  .main .product-image .icon1 {
+    bottom: 25%;
+    left: 5%;
+  }
+  .main .product-image .icon2 {
+    right: 9%;
   }
 }
