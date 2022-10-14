@@ -174,7 +174,10 @@ margin-left: 15px;
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  .App {
+    padding-bottom: 100px;
+  }
   .main{
     flex-direction: column;
     margin-top: 50px;
@@ -204,6 +207,77 @@ margin-left: 15px;
   .main .product-contents {
     height: unset;
     margin-top:0%;
+  }
+  .product-contents h2 {
+    font-size: 12px;
+  }
+  .product-contents span p {
+    font-size: 16px;
+  }
+  .main .product-contents span p {
+    margin: 5px;
+  }
+  .product-submain h3 {
+    font-size: 14px;
+  }
+  .product-submain p {
+    font-size: 12px;
+  }
+  .reviewer-details h2 {
+    font-size: 14px;
+  }
+  .reviewer-details p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .App {
+    padding-bottom: 100px;
+  }
+  .header-nav {
+    gap: 10px;
+    width: 95%;
+    margin: auto;
+  } 
+  .header-nav span {
+    margin: 0px 10px;
+  }
+  .main{
+    flex-direction: column;
+    margin-top: 50px;
+    height: 600px;
+    gap: 20px;
+  }
+  .main .icon-set {
+    position: relative;
+    top: 0px;
+  }
+  .product-images {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .product-details {
+    width: 100%;
+  }
+  .product-submain div {
+    width: 90%;
+    margin: auto;
+  }
+  .product-review {
+    width: 90%;
+    margin: auto;
+  }
+  .hiddenhr {
+    display: block;
+    margin: 5px 0px !important;
+  }
+  .main .product-contents {
+    height: unset;
+    margin-top:0%;
+    width: 90%;
+    margin: auto;
   }
   .product-contents h2 {
     font-size: 12px;
