@@ -246,7 +246,8 @@ margin-left: 15px;
   .main{
     flex-direction: column;
     margin-top: 50px;
-     gap: 16px;
+    height: 500px;
+    gap: 16px;
   }
   .main .icon-set {
     position: relative;
@@ -263,9 +264,7 @@ margin-left: 15px;
     justify-content: center;
   }
   .main .product-image {
-     width: 95%;
-     margin: auto;
-     height: 300px;
+    display: contents;
   }
   .product-details {
     width: 100%;
