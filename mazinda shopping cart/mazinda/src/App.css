@@ -63,7 +63,9 @@
   height: 360px;
   width: 360px;
 }
-
+.product-image .pimg {
+  animation: vibrate 2s;
+}
 .main .product-image span {
   position: absolute;
   height: 20px;
@@ -112,6 +114,7 @@ font-weight: 600;
 font-size: 16px;
 line-height: 20px;
 color: #A7A7A7;
+animation: slidein 1s 1s forwards;
 }
 
 hr {
@@ -171,6 +174,10 @@ margin-left: 15px;
 .review-stars p {
   margin-left: 30px;
 }
+.reviewer-details h2 {
+  animation: fadeIn 5s;
+
+}
 
 
 
@@ -221,10 +228,13 @@ margin-left: 15px;
     font-size: 14px;
   }
   .product-submain p {
+    animation: slidein 1s 1s forwards;
     font-size: 12px;
   }
   .reviewer-details h2 {
     font-size: 14px;
+    animation: fadeIn 5s;
+
   }
   .reviewer-details p {
     font-size: 12px;
@@ -301,9 +311,11 @@ margin-left: 15px;
   }
   .product-submain p {
     font-size: 12px;
+    animation: slidein 1s 1s forwards;
   }
   .reviewer-details h2 {
     font-size: 14px;
+    animation: fadeIn 5s;
   }
   .reviewer-details p {
     font-size: 12px;
@@ -322,4 +334,34 @@ margin-left: 15px;
   .main .product-image .icon2 {
     right: 9%;
   }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes vibrate {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(-1deg); }
+  20% { transform: rotate(1deg); }
+  30% { transform: rotate(0deg); }
+  40% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  60% { transform: rotate(0deg); }
+  70% { transform: rotate(-1deg); }
+  80% { transform: rotate(1deg); }
+  90% { transform: rotate(0deg); }
+  100% { transform: rotate(-1deg); }
 }
