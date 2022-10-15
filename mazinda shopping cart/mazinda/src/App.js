@@ -94,10 +94,10 @@ function App() {
               </span>
 
               <div className="icon-set">
-                <FontAwesomeIcon  icon={faCircleDot} color={icon2Color}/>
-                <FontAwesomeIcon  icon={faGripLines} color={icon1Color}/>
+                <FontAwesomeIcon  icon={faCircleDot} color={icon2Color} style={{margin: 5}}/>
+                <FontAwesomeIcon  icon={faGripLines} color={icon1Color} style={{margin: 5}}/>
                 
-                <FontAwesomeIcon  icon={faCircleDot} color={iconColor}/>
+                <FontAwesomeIcon  icon={faCircleDot} color={iconColor} style={{margin: 5}}/>
               </div>
             </div>
             <hr className="hiddenhr" />
