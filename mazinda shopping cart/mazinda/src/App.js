@@ -16,8 +16,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState, useRef } from "react";
 import "animate.css/animate.min.css";
-import { AnimationOnScroll } from 'react-animation-on-scroll';
-
+import { AnimationOnScroll } from "react-animation-on-scroll";
 
 function App() {
   const [productname, setProductName] = useState(
@@ -25,10 +24,9 @@ function App() {
   );
 
   const [productImg, setProductImg] = useState(productImage);
-  const [iconColor, setIconColor] = useState('black')
-  const [icon1Color, setIcon1Color] = useState('#5597DA')
-  const [icon2Color, setIcon2Color] = useState('black')
-
+  const [iconColor, setIconColor] = useState("black");
+  const [icon1Color, setIcon1Color] = useState("#5597DA");
+  const [icon2Color, setIcon2Color] = useState("black");
 
   const searchRef = useRef("");
   const handleSubmit = () => {
@@ -37,18 +35,17 @@ function App() {
 
   const ImagerightHandler = () => {
     setProductImg(rec2);
-    setIcon2Color('#5597DA')
-    setIcon1Color('black')
-    setIconColor('black')
-
+    setIcon2Color("#5597DA");
+    setIcon1Color("black");
+    setIconColor("black");
   };
   const ImageleftHandler = () => {
     setProductImg(productImage);
-    setIconColor('#5597DA')
-    setIcon1Color('black')
-    setIcon2Color('black')
+    setIconColor("#5597DA");
+    setIcon1Color("black");
+    setIcon2Color("black");
   };
- 
+
   return (
     <div className="App">
       <div className="header-nav">
@@ -94,18 +91,34 @@ function App() {
               </span>
 
               <div className="icon-set">
-                <FontAwesomeIcon  icon={faCircleDot} color={icon2Color} style={{margin: 5}}/>
-                <FontAwesomeIcon  icon={faGripLines} color={icon1Color} style={{margin: 5}}/>
-                
-                <FontAwesomeIcon  icon={faCircleDot} color={iconColor} style={{margin: 5}}/>
+                <FontAwesomeIcon
+                  icon={faCircleDot}
+                  color={icon2Color}
+                  style={{ margin: 5 }}
+                />
+                <FontAwesomeIcon
+                  icon={faGripLines}
+                  color={icon1Color}
+                  style={{ margin: 5 }}
+                />
+
+                <FontAwesomeIcon
+                  icon={faCircleDot}
+                  color={iconColor}
+                  style={{ margin: 5 }}
+                />
               </div>
             </div>
             <hr className="hiddenhr" />
           </div>
 
           <div className="product-contents ">
-
-            <h2> <AnimationOnScroll animateIn="animate__bounce">{productname}</AnimationOnScroll> </h2>
+            <h2>
+              {" "}
+              <AnimationOnScroll animateIn="animate__bounce">
+                {productname}
+              </AnimationOnScroll>{" "}
+            </h2>
             <span>
               <p className="price-before">
                 <s>1,30,999</s>
@@ -120,18 +133,19 @@ function App() {
           <div>
             <h3>Description</h3>
             <p>
-              <AnimationOnScroll  animateIn="animate__pulse">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-              non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit. Exercitation veniam
-              consequat sunt nostrud amet. Amet minim mollit non deserunt
-              ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-              duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-              amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor
-              do amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+              <AnimationOnScroll animateIn="animate__pulse">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet. Amet minim
+                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                Velit officia consequat duis enim velit mollit. Exercitation
+                veniam consequat sunt nostrud amet. Amet minim mollit non
+                deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                officia consequat duis enim velit mollit. Exercitation veniam
+                consequat sunt nostrud amet. Amet minim mollit non deserunt
+                ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit mollit. Exercitation veniam consequat
+                sunt nostrud amet.
               </AnimationOnScroll>
             </p>
           </div>
@@ -139,18 +153,19 @@ function App() {
           <div>
             <h3>Information</h3>
             <p>
-            <AnimationOnScroll  animateIn="animate__pulse">
-              Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
-              non deserunt ullamco est sit aliqua dolor do amet sint. Velit
-              officia consequat duis enim velit mollit. Exercitation veniam
-              consequat sunt nostrud amet. Amet minim mollit non deserunt
-              ullamco est sit aliqua dolor do amet sint. Velit officia consequat
-              duis enim velit mollit. Exercitation veniam consequat sunt nostrud
-              amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor
-              do amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.
+              <AnimationOnScroll animateIn="animate__pulse">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint. Velit officia consequat duis enim velit mollit.
+                Exercitation veniam consequat sunt nostrud amet. Amet minim
+                mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+                Velit officia consequat duis enim velit mollit. Exercitation
+                veniam consequat sunt nostrud amet. Amet minim mollit non
+                deserunt ullamco est sit aliqua dolor do amet sint. Velit
+                officia consequat duis enim velit mollit. Exercitation veniam
+                consequat sunt nostrud amet. Amet minim mollit non deserunt
+                ullamco est sit aliqua dolor do amet sint. Velit officia
+                consequat duis enim velit mollit. Exercitation veniam consequat
+                sunt nostrud amet.
               </AnimationOnScroll>
             </p>
           </div>
@@ -165,14 +180,12 @@ function App() {
             <h2>Akash Khurana</h2>
 
             <div className="review-stars">
-
               <AnimationOnScroll animateIn="animate__bounce">
-                
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStarHalfStroke} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStarHalfStroke} color="#FFD400" />
               </AnimationOnScroll>
               <p>4.5/5.0</p>
             </div>
@@ -181,12 +194,12 @@ function App() {
           <div className="reviewer-details   ">
             <h2>Gurdev Singh</h2>
             <div className="review-stars">
-            <AnimationOnScroll animateIn="animate__bounce">
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#000000" />
+              <AnimationOnScroll animateIn="animate__bounce">
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#000000" />
               </AnimationOnScroll>
               <p>4.0/5.0</p>
             </div>
@@ -195,12 +208,12 @@ function App() {
           <div className="reviewer-details   ">
             <h2>Rishiika Sandal</h2>
             <div className="review-stars">
-            <AnimationOnScroll animateIn="animate__bounce">
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#FFD400" />
-              <FontAwesomeIcon icon={faStar} color="#000000" />
+              <AnimationOnScroll animateIn="animate__bounce">
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#FFD400" />
+                <FontAwesomeIcon icon={faStar} color="#000000" />
               </AnimationOnScroll>
               <p>4.0/5.0</p>
             </div>
