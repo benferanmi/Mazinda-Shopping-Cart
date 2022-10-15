@@ -344,6 +344,7 @@ margin-left: 15px;
   }
   .product-image .pimg {
     width:95%;
+    height: 100%;
   }
   .main .product-image .icon1 {
     bottom: 44%;
@@ -368,6 +369,12 @@ margin-left: 15px;
   .main .product-image .icon3 svg {
     width: 40px;
     height: 40px;
+  }
+  .button-light {
+    margin-right: 5px;
+  }
+  .button-solid {
+    margin-left: 5px;
   }
 }
 

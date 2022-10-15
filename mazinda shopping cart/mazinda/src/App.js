@@ -35,14 +35,14 @@ function App() {
     console.log(searchRef.current.value);
   };
 
-  const ImageleftHandler = () => {
+  const ImagerightHandler = () => {
     setProductImg(rec2);
     setIcon2Color('#5597DA')
     setIcon1Color('black')
     setIconColor('black')
 
   };
-  const ImagerightHandler = () => {
+  const ImageleftHandler = () => {
     setProductImg(productImage);
     setIconColor('#5597DA')
     setIcon1Color('black')
