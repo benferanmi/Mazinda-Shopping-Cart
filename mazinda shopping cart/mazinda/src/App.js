@@ -1,6 +1,7 @@
 import "./App.css";
 import productImage from "./assets/images/banner img.png";
 import rec from "./assets/images/rec.png";
+import rec2 from "./assets/images/ip.jpg";
 import circle from "./assets/images/circle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -11,9 +12,9 @@ import {
   faSearch,
   faStarHalfStroke,
   faStar,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef } from "react";
-
+import { useState, useRef, useEffect } from "react";
 
 function App() {
   const [productname, serProductName] = useState(
@@ -21,10 +22,17 @@ function App() {
   );
   const [productImg, setProductImg] = useState(productImage);
 
-  const searchRef = useRef('')
-  const handleSubmit =() => {
-    console.log(searchRef.current.value)
-  }
+  const searchRef = useRef("");
+  const handleSubmit = () => {
+    console.log(searchRef.current.value);
+  };
+
+  const ImageleftHandler = () => {
+    setProductImg(rec2);
+  };
+  const ImagerightHandler = () => {
+    setProductImg(productImage);
+  };
 
   return (
     <div className="App">
@@ -34,7 +42,13 @@ function App() {
         </span>
         <div className="nav-search">
           <FontAwesomeIcon icon={faSearch} className="icon" />
-          <input type="text" ref={searchRef} onChange={handleSubmit} name="search" placeholder="search on mazinda" />
+          <input
+            type="text"
+            ref={searchRef}
+            onChange={handleSubmit}
+            name="search"
+            placeholder="search on mazinda"
+          />
         </div>
         <span>
           <FontAwesomeIcon icon={faCartShopping} />
@@ -42,26 +56,36 @@ function App() {
       </div>
       <div className="product-details">
         <div className="main">
+          <div className="product-images">
+            <div className="product-image">
+              <span className="icon2">
+                <FontAwesomeIcon icon={faShare} />
+              </span>
+              <span className="icon4">
+                <FontAwesomeIcon
+                  icon={faArrowLeft}
+                  onClick={ImageleftHandler}
+                />
+              </span>
+              <img src={productImg} alt="product" className="pimg" />
+              <span className="icon3">
+                <FontAwesomeIcon
+                  icon={faArrowRight}
+                  onClick={ImagerightHandler}
+                />
+              </span>
+              <span className="icon1">
+                <FontAwesomeIcon icon={faHeart} color="red" />
+              </span>
 
-        <div className="product-images">
-        <div className="product-image">
-            <span className="icon2">
-              <FontAwesomeIcon icon={faShare} />
-            </span>
-            <img src={productImg} alt="product" className="pimg" />
-            <span className="icon1">
-              <FontAwesomeIcon icon={faHeart} color="red" />
-            </span>
-
-            <div className="icon-set">
-              <img src={circle} alt="circle" />
-              <img src={rec} alt="circle" />
-              <img src={circle} alt="circle" />
+              <div className="icon-set">
+                <img src={circle} alt="circle" />
+                <img src={rec} alt="circle" />
+                <img src={circle} alt="circle" />
+              </div>
             </div>
+            <hr className="hiddenhr" />
           </div>
-        <hr className="hiddenhr"/>
-        </div>
-          
 
           <div className="product-contents">
             <h2>{productname}</h2>
@@ -130,7 +154,6 @@ function App() {
             <p>Superb Quality and Best Service</p>
           </div>
           <div className="reviewer-details">
-          
             <h2>Gurdev Singh</h2>
             <div className="review-stars">
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
@@ -143,7 +166,7 @@ function App() {
             <p>My new Phone🥳🥳🥳</p>
           </div>
           <div className="reviewer-details">
-              <h2>Rishiika Sandal</h2>
+            <h2>Rishiika Sandal</h2>
             <div className="review-stars">
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />

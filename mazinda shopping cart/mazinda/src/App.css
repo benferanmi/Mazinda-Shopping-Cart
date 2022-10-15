@@ -76,10 +76,17 @@
   left: 1%;
 }
 .main .product-image .icon2 {
-  top: 2%x;
+  top: 2%;
   right: 1%;
 }
-
+.main .product-image .icon3 {
+  top: 30%;
+  right: 7%;
+}
+.main .product-image .icon4 {
+  top: 30%;
+  left: 7%;
+}
 .main .icon-set {
   display: flex;
   align-items: center;
@@ -329,6 +336,13 @@ margin-left: 15px;
   }
   .main .product-image .icon2 {
     right: 9%;
+    top: unset;
+  }
+  .main .product-image .icon3 {
+    top: 50%;
+  }
+  .main .product-image .icon4 {
+    top: 50%;
   }
 }
 
