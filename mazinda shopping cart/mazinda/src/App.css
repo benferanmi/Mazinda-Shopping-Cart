@@ -3,7 +3,7 @@
   background-color: white;
   color: black;
   padding-top: 2%;
-  padding-bottom: 4%;
+  padding-bottom: 10%;
   font-family: 'Montserrat', sans-serif !important;
 
 }
@@ -54,14 +54,11 @@
   display: flex;
   flex-direction: row;
   gap: 40px;
-  height: 360px;
   margin-bottom: 30px;
 }
 
 .main .product-image {
   position: relative;
-  height: 360px;
-  width: 360px;
 }
 .product-image .pimg {
   animation: vibrate 2s;
@@ -256,7 +253,6 @@ margin-left: 15px;
   .main{
     flex-direction: column;
     margin-top: 50px;
-    height: 500px;
     gap: 16px;
   }
   .main .icon-set {

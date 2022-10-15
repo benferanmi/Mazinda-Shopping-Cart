@@ -59,9 +59,9 @@ function App() {
               <img src={circle} alt="circle" />
             </div>
           </div>
-
+        <hr className="hiddenhr"/>
         </div>
-          <hr className="hiddenhr"/>
+          
 
           <div className="product-contents">
             <h2>{productname}</h2>
