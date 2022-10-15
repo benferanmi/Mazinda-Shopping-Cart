@@ -1,8 +1,6 @@
 import "./App.css";
 import productImage from "./assets/images/banner img.png";
-import rec from "./assets/images/rec.png";
 import rec2 from "./assets/images/ip.jpg";
-import circle from "./assets/images/circle.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faShare,
@@ -13,14 +11,24 @@ import {
   faStarHalfStroke,
   faStar,
   faArrowRight,
+  faCircleDot,
+  faGripLines,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
+import "animate.css/animate.min.css";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 
 function App() {
-  const [productname, serProductName] = useState(
+  const [productname, setProductName] = useState(
     "Iphone 14 Pro Max  (256 GB) (8 GB RAM)"
   );
+
   const [productImg, setProductImg] = useState(productImage);
+  const [iconColor, setIconColor] = useState('black')
+  const [icon1Color, setIcon1Color] = useState('#5597DA')
+  const [icon2Color, setIcon2Color] = useState('black')
+
 
   const searchRef = useRef("");
   const handleSubmit = () => {
@@ -29,11 +37,18 @@ function App() {
 
   const ImageleftHandler = () => {
     setProductImg(rec2);
+    setIcon2Color('#5597DA')
+    setIcon1Color('black')
+    setIconColor('black')
+
   };
   const ImagerightHandler = () => {
     setProductImg(productImage);
+    setIconColor('#5597DA')
+    setIcon1Color('black')
+    setIcon2Color('black')
   };
-
+ 
   return (
     <div className="App">
       <div className="header-nav">
@@ -79,16 +94,18 @@ function App() {
               </span>
 
               <div className="icon-set">
-                <img src={circle} alt="circle" />
-                <img src={rec} alt="circle" />
-                <img src={circle} alt="circle" />
+                <FontAwesomeIcon  icon={faCircleDot} color={icon2Color}/>
+                <FontAwesomeIcon  icon={faGripLines} color={icon1Color}/>
+                
+                <FontAwesomeIcon  icon={faCircleDot} color={iconColor}/>
               </div>
             </div>
             <hr className="hiddenhr" />
           </div>
 
-          <div className="product-contents">
-            <h2>{productname}</h2>
+          <div className="product-contents ">
+
+            <h2> <AnimationOnScroll animateIn="animate__bounce">{productname}</AnimationOnScroll> </h2>
             <span>
               <p className="price-before">
                 <s>1,30,999</s>
@@ -103,6 +120,7 @@ function App() {
           <div>
             <h3>Description</h3>
             <p>
+              <AnimationOnScroll  animateIn="animate__pulse">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
@@ -114,12 +132,14 @@ function App() {
               amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor
               do amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
+              </AnimationOnScroll>
             </p>
           </div>
           <hr />
           <div>
             <h3>Information</h3>
             <p>
+            <AnimationOnScroll  animateIn="animate__pulse">
               Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet. Amet minim mollit
@@ -131,6 +151,7 @@ function App() {
               amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor
               do amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.
+              </AnimationOnScroll>
             </p>
           </div>
         </div>
@@ -140,39 +161,47 @@ function App() {
         <div className="product-review">
           <h3>Reviews</h3>
 
-          <div className="reviewer-details">
+          <div className="reviewer-details   ">
             <h2>Akash Khurana</h2>
 
             <div className="review-stars">
+
+              <AnimationOnScroll animateIn="animate__bounce">
+                
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStarHalfStroke} color="#FFD400" />
+              </AnimationOnScroll>
               <p>4.5/5.0</p>
             </div>
             <p>Superb Quality and Best Service</p>
           </div>
-          <div className="reviewer-details">
+          <div className="reviewer-details   ">
             <h2>Gurdev Singh</h2>
             <div className="review-stars">
+            <AnimationOnScroll animateIn="animate__bounce">
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#000000" />
+              </AnimationOnScroll>
               <p>4.0/5.0</p>
             </div>
-            <p>My new Phone🥳🥳🥳</p>
+            <p>My new Phone</p>
           </div>
-          <div className="reviewer-details">
+          <div className="reviewer-details   ">
             <h2>Rishiika Sandal</h2>
             <div className="review-stars">
+            <AnimationOnScroll animateIn="animate__bounce">
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#FFD400" />
               <FontAwesomeIcon icon={faStar} color="#000000" />
+              </AnimationOnScroll>
               <p>4.0/5.0</p>
             </div>
             <p>Loved it !!!!😍💗</p>
